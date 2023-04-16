@@ -1,3 +1,4 @@
+// The arrays are sorted in an ascending order
 const arr1 = [1, 2, 5, 7, 9];
 const arr2 = [2, 3, 5, 7, 8, 11, 15];
 
