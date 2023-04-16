@@ -15,6 +15,6 @@ For example:
 - O(2^n): exponential time complexity, where the number of operations grows exponentially with the input size.
 
 To illustrate the complexity meaning you will need to implement the method "fasterFindCommonItems()" in the linear complexity of O(n).
-The method accepts 2 arrays of integers and returns a new array that contains the common elements (equal integers) between the 2 arrays 
+The method accepts 2 **sorted** arrays of integers **in ascending order** and returns a new array that contains the common elements (equal integers) between the 2 arrays 
 
 As an example, the findCommonItems was already implemented in O(n^2) complexity because it searches common items by using 2 nested loops causing the algorithm to execute **(n * m)** operations (where n, m are the 2 array sizes).
