@@ -12,6 +12,7 @@ class HashTable {
   }
 
   put(key, value) {
+    console.log(`Putting ${key}->${value} in hash table`);
     const hashCode = this.#hashCode(key);
     const bucket = this.#table[hashCode];
     if (!bucket) {
@@ -32,6 +33,7 @@ class HashTable {
       }
     }
     this.size++;
+    this.log();
   }
 
   remove(key) {
@@ -50,11 +52,13 @@ class HashTable {
     throw new Error("Not implemented");
   }
 
-  toString() {
+  log() {
+    console.log("================ Hash Table ================")
     for (let i = 0; i < this.#table.length; i++) {
       const element = this.#table[i];
-      console.log(element);
+      console.log(element ?? "NO_BUCKET");
     }
+    console.log("============================================")
   }
 
   #hashCode(key) {
@@ -69,9 +73,12 @@ class HashTable {
 }
 
 const hashTable = new HashTable();
-hashTable.put("key123", 1);
-hashTable.put("key456", 2);
-hashTable.put("key789", 3);
-hashTable.put("key123", 4);
-hashTable.put("key456", 5);
-hashTable.put("key321", 7);
+
+hashTable.put("key123", "Yotam");
+hashTable.put("key456", "Adam");
+hashTable.put("key789", "Aviv");
+hashTable.put("key123", "Gal");
+hashTable.put("key456", "Yoav");
+hashTable.put("key321", "Meir");
+
+hashTable.log();
